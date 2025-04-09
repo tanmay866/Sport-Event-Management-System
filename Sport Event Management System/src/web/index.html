@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Event Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sport Event Management System</h1>
+        </header>
+        
+        <div class="main-content">
+            <div class="form-container">
+                <h2>Add Participant</h2>
+                <form id="participantForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="score">Score:</label>
+                        <input type="number" id="score" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="event">Event:</label>
+                        <select id="event">
+                            <option value="Cricket">Cricket (Male)</option>
+                            <option value="Badminton">Badminton (Female)</option>
+                            <option value="Kabaddi">Kabaddi (Both)</option>
+                            <option value="Cycling">Cycling (Both)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn">Add Participant</button>
+                </form>
+            </div>
+            
+            <div class="results-container">
+                <h2>Event Details</h2>
+                <div class="event-selection">
+                    <label for="viewEvent">Select Event to View:</label>
+                    <select id="viewEvent">
+                        <option value="Cricket">Cricket</option>
+                        <option value="Badminton">Badminton</option>
+                        <option value="Kabaddi">Kabaddi</option>
+                        <option value="Cycling">Cycling</option>
+                    </select>
+                    <button id="viewEventBtn" class="btn">View Event</button>
+                </div>
+                
+                <div id="eventDetails" class="event-details">
+                    <h3 id="eventTitle">No event selected</h3>
+                    <div class="stats">
+                        <p>Gender Constraint: <span id="genderConstraint">-</span></p>
+                        <p>Total Participants: <span id="totalParticipants">0</span></p>
+                        <p>Male Participants: <span id="maleCount">0</span></p>
+                        <p>Female Participants: <span id="femaleCount">0</span></p>
+                        <p>Average Score: <span id="averageScore">0</span></p>
+                    </div>
+                    
+                    <h4>Participants</h4>
+                    <table id="participantsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Gender</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="participantsList">
+                            <!-- Participants will be listed here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="notification" class="notification">
+        <!-- Notifications will appear here -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
